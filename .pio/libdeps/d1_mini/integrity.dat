@@ -1,0 +1,6 @@
+adafruit/Adafruit MAX6675 Library@^1.1.0
+EEPROM
+ESP8266WebServer
+br3ttb/PID@^1.2.1
+ESP8266HTTPClient
+robotdyn/LCD_RGB_Keypad@^1.0.0
