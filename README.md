@@ -117,6 +117,11 @@ pio run -e d1_mini
 pio test -e native
 ```
 
+## 🛡️ Политика репозитория
+В репозитории подключен `repo-guard`: отдельный GitHub Actions workflow проверяет pull request'ы на соответствие `repo-policy.json` и change contract из описания PR или связанного issue.
+
+Текущая baseline-политика ограничивает один diff максимум 20 новыми файлами, 3 новыми Markdown-документами и 1500 net added lines. Pull request должен содержать блок `repo-guard-yaml` с намерением изменения; шаблоны для PR и issue уже добавлены в `.github/`.
+
 ## 📁 Структура проекта
 ```
 ├── src/
