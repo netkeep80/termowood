@@ -1,6 +1,3 @@
-adafruit/Adafruit MAX6675 Library@^1.1.0
-EEPROM
-ESP8266WebServer
+adafruit/Adafruit RGB LCD Shield Library@^1.2.2
 br3ttb/PID@^1.2.1
-ESP8266HTTPClient
-robotdyn/LCD_RGB_Keypad@^1.0.0
+siruli/MAX6675@^2.1.0
