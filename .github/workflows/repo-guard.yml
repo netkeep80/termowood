@@ -1,0 +1,28 @@
+name: repo-guard policy check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [main]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  policy-check:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce repository policy
+        uses: netkeep80/repo-guard@main
+        with:
+          mode: check-pr
+          enforcement: blocking
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
